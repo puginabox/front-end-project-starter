@@ -13,7 +13,8 @@ module.exports = function(grunt) {
                                 'js/directives/*.js',
                                 'js/controllers/*.js',
                                 'js/services/*.js',
-                                'js/modules/*.js'
+                                'js/modules/*.js',
+                                'js/*.js'
                             ]
                         } //files
                     } //my_target
@@ -21,7 +22,7 @@ module.exports = function(grunt) {
                 compass: {
                     dev: {
                         options: {
-                            config: 'config.rb' // the cCompass config file
+                            config: 'config.rb' // the Compass config file
                         } //options
                     } //dev
                 }, //compass
