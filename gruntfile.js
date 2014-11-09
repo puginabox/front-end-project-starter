@@ -1,7 +1,5 @@
 module.exports = function(grunt) {
-        grunt.loadNpmTasks('grunt-contrib-uglify'); // load uglify plugin
-        grunt.loadNpmTasks('grunt-contrib-watch'); // load watch plugin
-        grunt.loadNpmTasks('grunt-contrib-compass'); // load compass plugin
+
         grunt.initConfig({
 
                 uglify: {
@@ -23,33 +21,36 @@ module.exports = function(grunt) {
                 compass: {
                     dev: {
                         options: {
-                            config: 'config.rb' // the compass config file
+                            config: 'config.rb' // the cCompass config file
                         } //options
                     } //dev
                 }, //compass
-                //====================================================== watch it all ==========================|
+                //====================================================== WATCHING ==========================|
                 watch: {
                     options: {
                         livereload: true
                     },
                     scripts: {
-                        files: ['js/**/*.js'], // files to be watched
-                        tasks: ['uglify'] //  tasks to run on change
+                        files: ['js/**/*.js'], // watched FILES
+                        tasks: ['uglify'] //  tasks run on change
                     }, //scriptS
-                    //====================================================== Sass pre-processing ===================|      
+                    //---------------------------------------- Sass pre-processing ------------------|      
                     sass: {
                         files: ['dev/sass/*.scss'],
                         tasks: ['compass:dev']
                     }, //sass
-                    //============================================== watch for html page changes ===================|        
+                    //----------------------------------------  watch for html changes ------------------|   
                     html: {
                         files: ['*.html'] // this gruntfile is in the same dir as html pages
                     }
-
-
-
                 } //watch
             }) //initConfig
-            //=================================== initial task (watch) when grunt starts ===================|    
+
+        //====================================================== LOADING TASKS ==========================|
+        grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-contrib-watch');
+        grunt.loadNpmTasks('grunt-contrib-compass');
+
+        //---------------------------------------- initial task (watch) when grunt starts ------------------|     
         grunt.registerTask('default', 'watch');
     } //exports
