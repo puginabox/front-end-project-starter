@@ -3,8 +3,8 @@
 @import "fonts";
 
 // Dudley's amazing color library (https://github.com/dudleystorey/thenewdefaults/)
-@import 'colors/maps/_color-map';
-@import 'colors/functions/_color-generator';
+@import 'colors/sass/maps/_color-map';
+@import 'colors/sass/functions/_color-generator';
 
 // colors for this project
 @import "colors";

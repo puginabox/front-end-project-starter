@@ -26,6 +26,27 @@ module.exports = function(grunt) {
                         } //options
                     } //dev
                 }, //compass
+                copy: {
+                    html: {
+                        src: 'index.html',
+                        dest: 'www/index.html'
+                    }
+                },
+                // copy: {
+                //     html: {
+                //         files: {
+                //             "index.html": "<%= files.html.src %>",
+                //             "www/index.html": "<%= files.html.src %>"
+                //         }
+                //     }
+                // },
+
+                server: {
+                    base: "" + (process.env.SERVER_BASE || 'www'),
+                    web: {
+                        port: 8000
+                    }
+                },
                 //====================================================== WATCHING ==========================|
                 watch: {
                     options: {
@@ -51,7 +72,14 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks('grunt-contrib-uglify');
         grunt.loadNpmTasks('grunt-contrib-watch');
         grunt.loadNpmTasks('grunt-contrib-compass');
+        grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.loadNpmTasks('express');
+        // grunt.loadNpmTasks('compression'); gzip server compression nto working
+
+
+
+        grunt.loadTasks("tasks");
 
         //---------------------------------------- initial task (watch) when grunt starts ------------------|     
-        grunt.registerTask('default', 'watch');
+        grunt.registerTask('default', ['copy', 'server', 'watch']);
     } //exports
