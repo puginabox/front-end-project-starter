@@ -56,14 +56,13 @@ module.exports = function(grunt) {
                         files: ['js/**/*.js'], // watched FILES
                         tasks: ['uglify'] //  tasks run on change
                     }, //scriptS
-                    //---------------------------------------- Sass pre-processing ------------------|      
                     sass: {
                         files: ['dev/sass/*.scss'],
                         tasks: ['compass:dev']
                     }, //sass
-                    //----------------------------------------  watch for html changes ------------------|   
                     html: {
-                        files: ['*.html'] // this gruntfile is in the same dir as html pages
+                        files: ['*.html'],
+                        tasks: ['copy']
                     }
                 } //watch
             }) //initConfig
