@@ -5,7 +5,7 @@ module.exports = function(grunt) {
                 uglify: {
                     my_target: {
                         files: {
-                            'www/app.js': [
+                            'main.js': [
                                 'js/lib/jquery/dist/jquery.min.js',
                                 'js/lib/modernizr/modernizr.js',
                                 'js/lib/angular/angular.min.js',
@@ -14,8 +14,7 @@ module.exports = function(grunt) {
                                 'js/directives/*.js',
                                 'js/controllers/*.js',
                                 'js/services/*.js',
-                                'js/modules/*.js',
-                                'js/*.js'
+                                'js/modules/*.js'
                             ]
                         } //files
                     } //my_target
@@ -31,6 +30,10 @@ module.exports = function(grunt) {
                     html: {
                         src: 'index.html',
                         dest: 'www/index.html'
+                    },
+                    js: {
+                        src: 'js/main.js',
+                        dest: 'www/main.js'
                     }
                 },
                 // copy: {
