@@ -24,14 +24,15 @@
         "grunt-contrib-clean": "*",
         "grunt-contrib-compass": "*",
         "grunt-contrib-copy": "*",
+        "grunt-contrib-cssmin": "*",
         "grunt-contrib-jshint": "*",
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
         "grunt-svgmin": "*",
-        "matchdep": "*",
-        "express": "*"
+        "matchdep": "*"
     },
     "dependencies": {
+        "express": "*",
         "compression": "^1.2.0"
     }
 }

@@ -5,7 +5,7 @@ module.exports = function(grunt) {
                 uglify: {
                     my_target: {
                         files: {
-                            'main.js': [
+                            'js/main.js': [
                                 'js/lib/jquery/dist/jquery.min.js',
                                 'js/lib/modernizr/modernizr.js',
                                 'js/lib/angular/angular.min.js',
@@ -26,6 +26,13 @@ module.exports = function(grunt) {
                         } //options
                     } //dev
                 }, //compass
+                cssmin: {
+                    combine: {
+                        files: {
+                            'www/css/master.min.css': 'css/master.css'
+                        }
+                    }
+                },
                 copy: {
                     html: {
                         src: 'index.html',
@@ -33,18 +40,13 @@ module.exports = function(grunt) {
                     },
                     js: {
                         src: 'js/main.js',
-                        dest: 'www/main.js'
+                        dest: 'www/js/main.js'
+                    },
+                    css: {
+                        src: 'css/master.css',
+                        dest: 'www/css/master.css'
                     }
                 },
-                // copy: {
-                //     html: {
-                //         files: {
-                //             "index.html": "<%= files.html.src %>",
-                //             "www/index.html": "<%= files.html.src %>"
-                //         }
-                //     }
-                // },
-
                 server: {
                     base: "" + (process.env.SERVER_BASE || 'www'),
                     web: {
@@ -57,17 +59,22 @@ module.exports = function(grunt) {
                         livereload: true
                     },
                     scripts: {
-                        files: ['js/**/*.js'], // watched FILES
-                        tasks: ['uglify'] //  tasks run on change
+                        files: ['js/app.js',
+                            'js/directives/*.js',
+                            'js/controllers/*.js',
+                            'js/services/*.js',
+                            'js/modules/*.js'
+                        ], // watched FILES
+                        tasks: ['uglify', 'copy:js'] //  tasks run on change
                     }, //scriptS
                     sass: {
                         files: ['dev/sass/*.scss'],
-                        tasks: ['compass:dev']
+                        tasks: ['compass:dev', 'copy:css']
                     }, //sass
                     html: {
                         files: ['*.html'],
                         tasks: ['copy']
-                    }
+                    } // html
                 } //watch
             }) //initConfig
 
@@ -76,6 +83,7 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks('grunt-contrib-watch');
         grunt.loadNpmTasks('grunt-contrib-compass');
         grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.loadNpmTasks('grunt-contrib-cssmin');
         grunt.loadNpmTasks('express');
         // grunt.loadNpmTasks('compression'); gzip server compression nto working
 
