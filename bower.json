@@ -27,6 +27,7 @@
         "jquery": "latest",
         "requirejs": "latest",
         "angularjs": "latest",
-        "angular-route": "latest"
+        "angular-route": "latest",
+        "modernizr": "latest"
     }
 }

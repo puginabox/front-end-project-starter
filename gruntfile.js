@@ -7,6 +7,7 @@ module.exports = function(grunt) {
                         files: {
                             'www/app.js': [
                                 'js/lib/jquery/dist/jquery.min.js',
+                                'js/lib/modernizr/modernizr.js',
                                 'js/lib/angular/angular.min.js',
                                 'js/lib/angular-route/angular-route.min.js',
                                 'js/app.js',
