@@ -25,7 +25,6 @@
     ],
     "dependencies": {
         "jquery": "latest",
-        "requirejs": "latest",
         "angularjs": "latest",
         "angular-route": "latest",
         "modernizr": "latest"

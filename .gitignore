@@ -1,6 +1,6 @@
 www
 node_modules
-bower_modules
+js/lib
 .DS_Store
 .sass-cache
 npm-debug.log
