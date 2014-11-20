@@ -1,1 +1,1 @@
-console.log("1 - directives");
+console.log("4 - directives");

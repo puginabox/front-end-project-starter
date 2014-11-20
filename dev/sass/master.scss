@@ -1,13 +1,16 @@
 @import "normalize";
-@import "_ngCloaked";
+@import "ngCloaked";
 @import "fonts";
-// Dudley's amazing color library (https://github.com/dudleystorey/thenewdefaults/)
+// Dudley's amazing color library (https: //github.com/dudleystorey/thenewdefaults/)
 
 
-@import "colors/color-map";
-@import "colors/color-generator";
+@import "color-library";
+
 // colors for this project
+
 @import "colors";
+
 @import "mixins";
 @import "base";
+@import "layout";
 @import "media-queries";

@@ -4,5 +4,5 @@ sass_dir = 'dev/sass'
 javascripts_dir = 'js'
 # output_style = :compressed
 output_style = :expanded
-relative_assets = true;
+relative_assets = true
 # environment = :development
