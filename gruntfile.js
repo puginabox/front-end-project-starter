@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                     } //dev
                 }, //compass
                 server: {
-                    base: "" + (process.env.SERVER_BASE || 'www'),
+                    base: "" + (process.env.SERVER_BASE || '/'),
                     web: {
                         port: 8000
                     }

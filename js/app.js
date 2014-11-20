@@ -1,9 +1,9 @@
 console.log("1 - app");
 
-(function() {
+// (function() {
 
 
-    var app = angular.module('workflow', []);
+var app = angular.module('workflow', ['ngSanitize']);
 
 
-})();
+// })();
