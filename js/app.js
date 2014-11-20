@@ -19,7 +19,7 @@ var app = angular.module('workflow', ['ngSanitize', 'ngRoute']);
 
 
 
-app.config(function ($routeProvider) {
+app.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.when('/list1', {
         templateUrl: 'partials/list1.html',
@@ -40,4 +40,4 @@ app.config(function ($routeProvider) {
         redirectTo: '/list'
     });
 
-});
+}]);
