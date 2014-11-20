@@ -28,6 +28,7 @@
     "angularjs": "latest",
     "angular-route": "latest",
     "modernizr": "latest",
-    "angular-sanitize": "~1.3.3"
+    "angular-sanitize": "~1.3.3",
+    "foundation": "~5.4.7"
   }
 }
