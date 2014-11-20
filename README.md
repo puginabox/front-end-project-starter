@@ -1,4 +1,2 @@
-grunt-starter
-=============
-
-Grunt Scaffolding
+catalog
+=======
