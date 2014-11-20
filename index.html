@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="workflow" ng-cloak>
 
+<html ng-app="workflow">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,55 +28,16 @@
     <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/languageController.js"></script>
+    <script src="js/controllers/viewController.js"></script>
     <script src="js/services.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/modules.js"></script>
 </head>
 
 <body>
-    <header class="row panel stone">colors a-plenty</header>
-    <section class="row">
-        <article class="large-3 columns">
-            <div class="panel spruce">
-                <h5>spruce</h5>
-                <p>{{}}</p>
-            </div>
-        </article>
-        <article class="large-6 columns">
-            <div class="panel spruce">
-                <h5>spruce</h5>
-                <p>{{}}</p>
-            </div>
-        </article>
-        <article class="large-3  columns">
-            <div class="panel spruce">
-                <h5>spruce</h5>
-                <p>{{}}</p>
-            </div>
-        </article>
-    </section>
-
-    <section ng-controller="mainController
-">
-        <h1>{{object.name}}, {{object.color}}</h1>
-
-        <ul>
-            <li class="animate-repeat" ng-repeat="friend in friends | filter:q as results">
-                [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
-            </li>
-            <li class="animate-repeat" ng-if="results.length == 0">
-                <strong>No results found...</strong>
-            </li>
-        </ul>
-
-        <aside ng-bind-html="snippet">
-            <h1>some stuff</h1>
-        </aside>
-
-        <section ng-controller="mainController">
-            <h1>{{object.color}}, {{object.name}}</h1>
-        </section>
-    </section>
+    <section ng-controller="mainController">{{name}}</section>
+    <div ng-view></div>
     <script src="http://localhost:35729/livereload.js"></script>
 </body>
 

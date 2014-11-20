@@ -19,8 +19,9 @@ app.controller('mainController', function mainController($scope) {
 	  {name:'Erika', age:27, gender:'girl'},
 	  {name:'Patrick', age:34, gender:'boy'},
 	  {name:'Samantha', age:32, gender:'girl'}
-	]
+	];
 
-    $scope.snippet = '<p><b>injected</b> by ngBind</p>'
+    // $scope.snippet = '<p><b>injected</b> by ngBind</p>'
+
 
 });
