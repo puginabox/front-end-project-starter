@@ -390,6 +390,31 @@ body.hidden-body {
   font-weight: 800;
   src: local("Dosis ExtraBold"), local("Dosis-ExtraBold"), url(http://fonts.gstatic.com/s/dosis/v3/nq3OPeKr7RUSF_YDJ1woxnYhjbSpvc47ee6xR_80Hnw.woff2) format("woff2"), url(http://fonts.gstatic.com/s/dosis/v3/k9xA3bmr7wstksq4xsFJaXYhjbSpvc47ee6xR_80Hnw.woff) format("woff");
 }
+/* line 5, ../dev/sass/_colors.scss */
+.coin {
+  background: #9897a9;
+}
+
+/* line 8, ../dev/sass/_colors.scss */
+.fossil {
+  background: #787276;
+}
+
+/* line 11, ../dev/sass/_colors.scss */
+.peach {
+  background: #fb9483;
+}
+
+/* line 14, ../dev/sass/_colors.scss */
+.coin {
+  background: #9897a9;
+}
+
+/* line 17, ../dev/sass/_colors.scss */
+.coin {
+  background: #9897a9;
+}
+
 /*-------------------- clearfix -------------------*/
 /* line 42, ../dev/sass/_mixins.scss */
 .clearFixit:before, .clearFixit:after {

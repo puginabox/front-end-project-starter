@@ -28,11 +28,10 @@
         "grunt-contrib-jshint": "*",
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
-        "grunt-svgmin": "*",
+        "grunt-htmlmin": "*",
         "matchdep": "*"
     },
     "dependencies": {
-        "express": "*",
-        "compression": "^1.2.0"
+        "express": "*"
     }
 }

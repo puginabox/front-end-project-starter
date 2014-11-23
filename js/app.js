@@ -1,43 +1,28 @@
-console.log("1 - app");
+
 
 var app = angular.module('workflow', ['ngSanitize', 'ngRoute']);
 
-// app.config(['$routeProvider', function ($routeProvider) {
-//     $routeProvider
-//         .when('/list1', {
-//             templateUrl: 'partials/list1.html',
-//             controller: 'mainController'
-//         })
-//         .when('/languages', {
-//             templateUrl: 'partials/languages.html',
-//             controller: 'languageController'
-//         })
-//         .otherwise({
-//             redirectTo: '/list'
-//         });
-//   }]);
-
-
+//console.log("1 - app");
 
 app.config(['$routeProvider', function ($routeProvider) {
 
-    $routeProvider.when('/list1', {
-        templateUrl: 'partials/list1.html',
-        controller: 'mainController'
+    $routeProvider.when('/page1', {
+        templateUrl: 'templates/page1.html',
+        controller: 'page1Controller'
     });
 
-    $routeProvider.when('/home', {
-        templateUrl: 'partials/home.html',
-        controller: 'HomeController'
+    $routeProvider.when('/page2', {
+        templateUrl: 'templates/page2.html',
+        controller: 'page2Controller'
     });
 
-    $routeProvider.when('/languages', {
-        templateUrl: 'partials/languages.html',
-        controller: 'languagesController'
+    $routeProvider.when('/page3', {
+        templateUrl: 'templates/page3.html',
+        controller: 'page3Controller'
     });
 
     $routeProvider.otherwise({
-        redirectTo: '/list'
+        redirectTo: '/page1'
     });
 
 }]);

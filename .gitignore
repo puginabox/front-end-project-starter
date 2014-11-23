@@ -1,6 +1,7 @@
 www
 node_modules
 js/lib
+vendor  
 .DS_Store
 .sass-cache
 npm-debug.log
