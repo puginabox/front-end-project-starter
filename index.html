@@ -35,6 +35,11 @@
 
 <body>
     <div ng-view></div>
+    <nav ng-controller="navController" class="panel row">
+        <ul  ng-repeat="page in links" class="large-6 inline-list panel apricot">
+            <li><a href="/#/{{page.url}}">{{page.template}}</a></li>
+        </ul>  
+            
     <script src="http://localhost:35729/livereload.js"></script>
 </body>
 

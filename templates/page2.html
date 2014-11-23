@@ -21,4 +21,9 @@
             <p>{{name}}</p>
         </div>
     </article>
+    <nav ng-repeat="item in products | filter=search">
+        <ul>
+            <li class="col-3">{{item.name}}</li>
+        </ul>
+    </nav>
 </section>
